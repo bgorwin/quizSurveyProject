@@ -19,20 +19,24 @@ const questions = [
     }
 ]
 
-// Loop through the questino array
+// Use querySelectors to display answers li
+
+// Loop through the question array
 for(let i = 0; i < questions.length; i ++){
     document.getElementById('questionsDisplay').innerHTML = `${questions[i].question}`;
 }
 
 // Loop through the answers array
 for(let a = 0; a < questions.length; a++){
-    document.getElementById('listOfAnswers').innerHTML = `${questions[a].answers.join('<br>')}`;
+    const answersToChoseFrom = document.getElementById('listOfAnswers').innerHTML = `${questions[a].answers.join('<br>')}`;
 }
 
 
 
 
+const startQuiz = () => {
 
+}
 
 // Map through the questions array object.
 // const listOfQuestions = item => {

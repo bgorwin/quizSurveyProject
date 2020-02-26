@@ -6,27 +6,24 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Quiz Survey</title>
+    <script src="assets/script.js" defer></script>
 </head>
 <body>
-    <!-- Navbar section -->
-    <navbar class="nav">
+    <nav>
         <ul>
-            <li><a class="active" href="#home">Coding Questions</a></li>
-            <li style="float:right"><a href="#">Home</a></li>
+            <li class="current"><a href="#home">Coding Questions</a></li>
+            <li><a href="#">Home</a></li>
         </ul>
-    </navbar>
+    </nav>
 
-    <div class="container"> 
-        <h1>Questions:</h1>
-        <h3 id="questionsDisplay"></h3>
+    <main> 
+        <h1>JavaScript Quiz</h1>
+        <h2>Questions:</h2>
+        <p id="questionsDisplay"></p>
         <ul id="listOfAnswers"></ul>
-        <br>
         <button id="questionButton">Next</button>
-    </div>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">Quiz Survey &#169 of Brent Gorwin</footer>
-    
-<script src="assets/script.js"></script>
+    <footer>Quiz Survey &#169 Brent Gorwin</footer>
 </body>
 </html>

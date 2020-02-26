@@ -5,7 +5,7 @@ body {
     background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
 }
 
-.container {
+main {
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -13,7 +13,7 @@ body {
 
 
 /* Navigation */
-.nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,11 +22,16 @@ body {
     /* background-color: #333; */
   }
   
-.nav li{
+nav li{
     float: left;
   }
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
   
-.nav li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -34,7 +39,7 @@ body {
     text-decoration: none;
   }
   
-.nav li a:hover {
+nav li a:hover {
     background-color: #111;
     color: white;
     border-radius: 10px;
@@ -63,7 +68,7 @@ body {
 
 
 /* Footer */
-.footer {
+footer {
     height: 50px;
     margin: auto;
     padding-top: 30px;
