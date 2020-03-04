@@ -18,7 +18,7 @@ const codingQuestions = [
 ]
 
 const myQuestions = () => {
-    const text = codingQuestions.map(function (item) {
+    const text = codingQuestions.map(function(item) {
         return item.question + "<br>" + "<br>" + "<input type='radio'>" + item.answers + "</input>" + "<br>" + "<br>";
     }).join(" ");
 

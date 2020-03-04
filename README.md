@@ -1,6 +1,8 @@
 # Quiz Survey
 ## Description: 
-This is a project that I wanted to build to practice learning JavaScript and getting used to thinking in a software logic way. I'm going to documenting through this process as well so that I can get used to working with a team and having to communicate the details of a project so that someone looking through the project for the first time will be able to get a good grasp of what is happening.
+This is a project that I wanted to build to practice learning JavaScript and getting used to thinking in a software logic way. I'm going to documenting through this process as well so that I can get used to working with a team and having to communicate the details of a project so that someone looking through the project for the first time will be able to get a good grasp of what is happening. 
+
+The project can be viewed via URL: https://bgorwin.github.io/quizSurveyProject/
 
 ## Project Details
 - There will be a series of question that will have multiple choice options below for the user to try and guess the correct answer. 
