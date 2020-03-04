@@ -1,63 +1,84 @@
-const questions = [
+const codingQuestions = [
     {
-        question: 'What does CSS stand for?',
+        question: "What does CSS stand for?", 
         answers: [
-            'Cascade Style Sheets',
-            'Cool Style Syntax',
-            'Case Sensitive Subjects'
-        ],
-        correctAnswer: 0
+            {a: 'Cascade Style Sheet', correctAnswer: true },
+            {b: 'Color Selects Section', correctAnswer: false },
+            {c: 'Create Section Style', correctAnswer: false }
+        ]
     },
     {
-        question: 'One use of Javascript is to ______.',
+        question: "Javascript can be used to ___",
         answers: [
-            'Code in Java',
-            'Build blocks of reusable code',
-            'Change the text font style'
-        ],
-        correctAnswer: 1
+            {a: 'Writing in Java', correctAnswer: false },
+            {b: 'Build reusable blocks of code', correctAnswer: true },
+            {c: 'Style color of fonts', correctAnswer: false }
+        ]
     }
 ]
 
-// Use querySelectors to display answers li
+const myQuestions = () => {
+    const text = codingQuestions.map(function (item) {
+        return item.question + "<br>" + "<br>" + "<input type='radio'>" + item.answers + "</input>" + "<br>" + "<br>";
+    }).join(" ");
 
-// Loop through the question array
-for(let i = 0; i < questions.length; i ++){
-    document.getElementById('questionsDisplay').innerHTML = `${questions[i].question}`;
+    document.getElementById('questionsDisplay').innerHTML = text;
+    console.log(text);
+    
+    // codingQuestions.forEach(function(entry){
+    //     // document.getElementById('questionsDisplay').innerHTML = entry;
+    //     // document.write(entry);
+    // });
+
+    // for (var i = 0; i < codingQuestions.length; i++){
+    //     return "<p>" + codingQuestions[i].question + "</p>";
+    // }
 }
 
-// Loop through the answers array
-for(let a = 0; a < questions.length; a++){
-    const answersToChoseFrom = document.getElementById('listOfAnswers').innerHTML = `${questions[a].answers.join('<br>')}`;
-}
+myQuestions();
 
 
 
 
-const startQuiz = () => {
 
-}
 
-// Map through the questions array object.
-// const listOfQuestions = item => {
-//     const mapThroughQuestions = [item.question, item.answers].join(' ');
-//     return mapThroughQuestions;
+
+
+
+
+
+
+
+
+
+
+
+// const questionOutput = document.getElementById('questionsDisplay');
+// const answerOutput = document.getElementById('listOfAnswers');
+
+// const loopQuestions = (item) => {
+//     var questions = [item.question].join(" ");
+//     return questions;
 // }
 
-// const listOfAnswers = item => {
-//     const mapThroughAnswers = [item.answers[0]];
-//     return mapThroughAnswers;
+// const loopAnswers = (item) => {
+//     var answer = [item.answers, item.text];
+//     return answer;
 // }
 
-// document.getElementById("questionsDisplay").innerHTML = `
-// <h3>${questions.map(listOfQuestions).join('<br><br>')}</h3>
-// <br>
-// `;
+// const startQuiz = () => {
+//     questionOutput.innerHTML = codingQuestions.map(loopQuestions);
+//     answerOutput.innerHTML = codingQuestions.map(loopAnswers);
+// }
+
+// startQuiz();
 
 
-
-// Select answer
-
-
-
-// Submit Answer
+// function getFullName(item) {
+//     var fullname = [item.firstname,item.lastname].join(" ");
+//     return fullname;
+//   }
+  
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = persons.map(getFullName);
+//   }
