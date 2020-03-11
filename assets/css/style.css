@@ -5,6 +5,17 @@ body {
     background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
 main {
     margin: auto;
     width: 50%;
@@ -44,8 +55,25 @@ nav li a:hover {
     color: white;
     border-radius: 10px;
   }
-
 /* End Navigation */
+
+
+
+/* Answers button section*/
+.choice-text {
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.choice-text:hover {
+  background-color: #35eb93;
+  color: white;
+  box-shadow: 0 0 5px #000000;
+}
+
 
 
 /* Button on quiz */
@@ -65,9 +93,6 @@ nav li a:hover {
 
 
 
-
-
-/* Footer */
 footer {
     height: 50px;
     margin: auto;
