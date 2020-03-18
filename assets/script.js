@@ -26,7 +26,7 @@ const renderQuestions = () => {
     const text = problems.map(function(item, index) {
         return `<fieldset><legend>${item.question}</legend>
         ${item.answers.map(a => 
-            `<label><input id='selectedAnswer' type='radio' name='answer${index}' required=[0]> ${a.text}</label>`).join("<br>")}</fieldset>`;
+            `<label><input id='selectedAnswer' type='radio' name='answer${index}' required> ${a.text}</label>`).join("<br>")}</fieldset>`;
         }).join("<br>");
 
     
@@ -43,13 +43,13 @@ const handleSubmitClick = (e) => {
     for(let problemIndex in problems) {
         const selectedAnswer = getSelectedAnswer(problemIndex);
         if (selectedAnswer.text == problems[problemIndex].correctAnswer) {
-            
             score++;
+            document.getElementById('displayScore').innerHTML = `<h3>Score: ${score}</h3>`;
+            document.createElement('input').innerHTML = `<input>${questionResults()}</input>`;
+        } else {
+            document.getElementById('displayScore').innerHTML = `<h3>Score: 0</h3>`;
         }
     }
-
-    alert(score);
-
 }
 
 function getSelectedAnswer(problemIndex) {
