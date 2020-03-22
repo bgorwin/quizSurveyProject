@@ -20,8 +20,6 @@ const problems = [
 ]
 
  
-
-
 const renderQuestions = () => {
     const text = problems.map(function(item, index) {
         return `<fieldset><legend>${item.question}</legend>
@@ -33,21 +31,30 @@ const renderQuestions = () => {
         document.getElementById('questionsDisplay').innerHTML = text;
 }
 
+// Below I used preventDefault from keeping the page from reloading when clicking the submit button and it keeps the current values
+// that the user selected to see if they got it wrong or not.
 const questionResults = () => {
-    document.getElementById('questionsForm').addEventListener('submit', handleSubmitClick);
+    document.getElementById('questionsForm').addEventListener('submit', (e) => {
+        e.preventDefault(handleSubmitClick());
+    });
 }
+
+
+
 
 const handleSubmitClick = (e) => {
     let score = 0;
 
     for(let problemIndex in problems) {
         const selectedAnswer = getSelectedAnswer(problemIndex);
+
         if (selectedAnswer.text == problems[problemIndex].correctAnswer) {
             score++;
             document.getElementById('displayScore').innerHTML = `<h3>Score: ${score}</h3>`;
-            document.createElement('input').innerHTML = `<input>${questionResults()}</input>`;
+            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" >Reset</button>`;           
         } else {
             document.getElementById('displayScore').innerHTML = `<h3>Score: 0</h3>`;
+            
         }
     }
 }
@@ -65,27 +72,12 @@ function getSelectedAnswer(problemIndex) {
     }
     return problems[problemIndex].answers[answerIndex];
 }
-   
 
 
 
-
-
-// codingQuestions.map(function(item, index){
-    //     if(item.answers === item.correctAnswer){
-    //         document.getElementById('selectedAnswer').addEventListener('click', function(){
-    //             document.getElementById('userSelected').innerText = 'This is correct!'
-    //         });
-    //     }
-    // });
-    
-
-
-
-
-
-renderQuestions();
 questionResults();
+renderQuestions();
+
 
 
 

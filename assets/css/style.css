@@ -91,6 +91,20 @@ nav li a:hover {
     color: white;
 }
 
+#resetButton {
+  width: 100px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #2cacd1;
+  color: white;
+  margin-top: 25px;
+}
+
+#resetButton:hover {
+  background-color: #3282b8;
+  color: white;
+}
+
 
 
 footer {
