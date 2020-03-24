@@ -39,16 +39,10 @@ const questionResults = () => {
     });
 }
 
-function resetQuiz(){
-    document.getElementById('restartQuiz').addEventListener('click', hideResetButton);
-    
-}
-
-function hideResetButton(){
-    document.getElementById('restartQuiz').style.display = 'none';
-    document.getElementById('displayScore').style.display = 'none';
-}
-
+// Instead of doing addEventListeners to the page, I added this refresh reload function to just refresh the whole page.
+function refreshPage(){
+    window.location.reload();
+} 
 
 
 const handleSubmitClick = (e) => {
@@ -60,10 +54,10 @@ const handleSubmitClick = (e) => {
         if (selectedAnswer.text == problems[problemIndex].correctAnswer) {
             score++;
             document.getElementById('displayScore').innerHTML = `<h3>Score: ${score}</h3>`;
-            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="resetQuiz()">Reset Quiz</button>`;           
+            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="refreshPage()">Reset Quiz</button>`;           
         } else {
             document.getElementById('displayScore').innerHTML = `<h3>Score: 0</h3>`;
-            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="resetQuiz()">Reset Quiz</button>`;
+            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="refreshPage()">Reset Quiz</button>`;
         }
     }
 }
@@ -86,7 +80,7 @@ function getSelectedAnswer(problemIndex) {
 
 questionResults();
 renderQuestions();
-resetQuiz();
+
 
 
 
