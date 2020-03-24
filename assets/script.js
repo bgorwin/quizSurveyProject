@@ -1,12 +1,12 @@
 const problems = [
     {
-        question: "What does CSS stand for?", 
+        question: "Is JavaScript the same as Java?", 
         answers: [
-            {text: 'Cascade Style Sheet'},
-            {text: 'Color Selects Section'},
-            {text: 'Create Section Style'}
+            {text: 'Yes'},
+            {text: 'No'},
+            {text: 'Maybe'}
         ], 
-        correctAnswer: 'Cascade Style Sheet'
+        correctAnswer: 'No'
     },
     {
         question: "Javascript can be used to ___",
@@ -16,6 +16,15 @@ const problems = [
             {text: 'Style color of fonts'}
         ],
         correctAnswer: 'Build reusable blocks of code'
+    },
+    {
+        question: "What does 'Nan' stand for?",
+        answers: [
+            {text: 'Not a number'},
+            {text: 'Name another number'},
+            {text: 'No answer name'}
+        ],
+        correctAnswer: 'Not a number'
     }
 ]
 
