@@ -92,6 +92,7 @@ nav li a:hover {
 }
 
 #resetButton {
+  flex-wrap: nowrap;
   width: 100px;
   height: 25px;
   border-radius: 20px;
@@ -104,6 +105,8 @@ nav li a:hover {
   background-color: #3282b8;
   color: white;
 }
+
+
 
 
 

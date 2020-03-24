@@ -39,6 +39,15 @@ const questionResults = () => {
     });
 }
 
+function resetQuiz(){
+    document.getElementById('restartQuiz').addEventListener('click', hideResetButton);
+    
+}
+
+function hideResetButton(){
+    document.getElementById('restartQuiz').style.display = 'none';
+    document.getElementById('displayScore').style.display = 'none';
+}
 
 
 
@@ -51,10 +60,10 @@ const handleSubmitClick = (e) => {
         if (selectedAnswer.text == problems[problemIndex].correctAnswer) {
             score++;
             document.getElementById('displayScore').innerHTML = `<h3>Score: ${score}</h3>`;
-            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" >Reset</button>`;           
+            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="resetQuiz()">Reset Quiz</button>`;           
         } else {
             document.getElementById('displayScore').innerHTML = `<h3>Score: 0</h3>`;
-            
+            document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="resetQuiz()">Reset Quiz</button>`;
         }
     }
 }
@@ -77,6 +86,7 @@ function getSelectedAnswer(problemIndex) {
 
 questionResults();
 renderQuestions();
+resetQuiz();
 
 
 
