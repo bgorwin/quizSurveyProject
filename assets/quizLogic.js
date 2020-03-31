@@ -1,34 +1,3 @@
-const problems = [
-    {
-        question: "Is JavaScript the same as Java?", 
-        answers: [
-            {text: 'Yes'},
-            {text: 'No'},
-            {text: 'Maybe'}
-        ], 
-        correctAnswer: 'No'
-    },
-    {
-        question: "Javascript can be used to ___",
-        answers: [
-            {text: 'Writing in Java'},
-            {text: 'Build reusable blocks of code'},
-            {text: 'Style color of fonts'}
-        ],
-        correctAnswer: 'Build reusable blocks of code'
-    },
-    {
-        question: "What does 'Nan' stand for?",
-        answers: [
-            {text: 'Not a number'},
-            {text: 'Name another number'},
-            {text: 'No answer name'}
-        ],
-        correctAnswer: 'Not a number'
-    }
-]
-
- 
 const renderQuestions = () => {
     const text = problems.map(function(item, index) {
         return `<fieldset><legend>${item.question}</legend>
@@ -60,7 +29,7 @@ const handleSubmitClick = (e) => {
     for(let problemIndex in problems) {
         const selectedAnswer = getSelectedAnswer(problemIndex);
 
-        if (selectedAnswer.text == problems[problemIndex].correctAnswer) {
+        if (selectedAnswer == problems[problemIndex].correctAnswer) {
             score++;
             document.getElementById('displayScore').innerHTML = `<h3>Score: ${score}</h3>`;
             document.getElementById('restartQuiz').innerHTML = `<button id="resetButton" type="reset" onclick="refreshPage()">Reset Quiz</button>`;           
@@ -75,46 +44,16 @@ function getSelectedAnswer(problemIndex) {
 
     const name = `answer${problemIndex}`;
     const radios = document.getElementsByName(name);
-    let answerIndex;
+    
     for(let r = 0; r < radios.length; r++){
         const radio = radios[r];
         if(radio.checked){
-            answerIndex = r;
+            return r;
         }
     }
-    return problems[problemIndex].answers[answerIndex];
 }
 
 
 
 questionResults();
 renderQuestions();
-
-
-
-
-
-
-
-
-
-
-
-// const codingQuestions = [
-//     {
-//         question: "What does CSS stand for?", 
-//         answers: [
-//             {text: 'Cascade Style Sheet', correctAnswer: true },
-//             {text: 'Color Selects Section', correctAnswer: false },
-//             {text: 'Create Section Style', correctAnswer: false }
-//         ]
-//     },
-//     {
-//         question: "Javascript can be used to ___",
-//         answers: [
-//             {text: 'Writing in Java', correctAnswer: false },
-//             {text: 'Build reusable blocks of code', correctAnswer: true },
-//             {text: 'Style color of fonts', correctAnswer: false }
-//         ]
-//     }
-// ]
