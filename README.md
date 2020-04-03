@@ -21,8 +21,8 @@ The project can be viewed via URL: https://bgorwin.github.io/quizSurveyProject/
 - Create an array of questions, pick a topic theme for these.
 - Create a way to keep track of the selected answers from the user.
 - Build out the HTML as detailed as I can and only import information in via javascript where necessary to avoid "Div Soup."
-- Do smooth transitions from one question to the next, such as a fade in and out when the question changes. 
-- Add in buttons for "Next" that will take you to the next question.
+- Have all of the questions on one page, more of a list style.
+- Have a Score display how many you got correct.
 - Eventually have the end page display the questions answered correctly and a separate section of the question that were answered incorrectly for the user to review.
 
 ##### Nice To Haves:
